@@ -10,7 +10,7 @@ Para ello, debe diseñar escenarios para dos características de Whatsapp (por e
 
 * Especificación de dos características de Whatsapp (no importa si la aplicación es Android, iOS, Windows Phone o Web) en Gherkin o Gauge
 * Cada especificación debe contener al menos un escenario de prueba
-* La respuesta del ejercicio [aquí] (Kata09.md), en el lenguaje de programación que le resulte más conveniente
+* La respuesta del ejercicio [aquí](Kata09.md), en el lenguaje de programación que le resulte más conveniente
 
 ### ** Proceso de sumisión ** ###
 El candidato debe implementar la solución y enviar un pull request a este repositorio con la solución.

@@ -1,0 +1,54 @@
+Para solucionar el inconveniente de la tienda Katana se requiere lo siguiente:
+
+* Modificar base de datos a las siguientes tablas
+
+1) tabla: Productos.
+* Id = tipo (serial ó autoincrement dependiendo el gestor de base de datos).
+* Nombre = de tipo varchar.
+
+2) tabla: Precios
+* Id = tipo (serial ó autoincrement dependiendo el gestor de base de datos).
+* id_producto = * Id = tipo (serial ó autoincrement dependiendo el gestor de base de datos).
+* precio_unitario = tipo float.
+* promoción: de tipo booleano.
+
+3) tabla: Promoción
+* Id = tipo (serial ó autoincrement dependiendo el gestor de base de datos).
+* id_producto = * Id = tipo (serial ó autoincrement dependiendo el gestor de base de datos).
+* cantidad_promocional = tipo float. 
+* precio_promocional = tipo float. 
+
+
+Restriciones:
+* La relación del campo "2id_productos" de la tabla "Precios" a la tabla "Productos" con el
+  campo "id" debe ser 1 a 1.
+
+* El campo "id_producto" de la tabla "Precios" debe ser único.
+
+* El campo "id_producto" de la tabla "Promoción" debe ser único.
+
+Explicación de Modificar base de datos:
+
+1._ Se separa del producto del precio unitario al precio promocional. Nos ayuda a evitar
+    consultas complejas al momento de querer obtener información unitaria o promocional.
+2._ Teniendo el campo booleano "promoción" en la tabla "Precios", nos ayuda a saber si 
+    existe una promoción para ese producto, lo cual es útil para evitar consultas
+    innecesarias en el sistema y mejorar performance de la aplicación.
+3._ Teniendo la tabla "Promoción", por medio de los campos "cantidad_promocional" y 
+    "precio_promocional", nos ayuda a evitar trabajos con cadenas de caracteres, tenemos
+    una relación directa de cantidad por precio.
+    
+ Explicación de modificación en el código con base a la modificación de base de datos:
+ 
+ 1._ Se realizarian funciones más sencillas al momento de calcular los precios:
+     Ejemplos:
+     a) Se consulta el producto con la relación de la tabla "Precios", si el campo "promocion"
+        es 0, no realizamos calculos de ajustes para la sumatoria de cantidades.  
+     b) Se consulta el producto con la relación de la tabla "Precios", si el campo "promocion"
+        es 1, extraemos la relación de precio_promocional y cantidad_promocional
+     c) Solo tendriamos una función de ajuste de precios ("por llamarla de alguna manera").
+        la cual se le pasa los datos de cantidad_actual (contador de productos), 
+        cantidad_promocional y precio_promocional extraidos de base de datos 
+        ("Nos sirviria para cualquier promoción de un producto"), y con calcular el modulo
+        de la cantidad de productos sabemos la cantidad de productos que llevan promocion y la que no, realizando una 
+        sumatoria sencilla para obtener el valor total.            

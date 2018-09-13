@@ -4,7 +4,7 @@
 
 Comprobar sus habilidades en diseñar escenarios de pruebas y en programación necesarias para la automatización de las pruebas.
 
-Para ello, debe diseñar escenarios para dos características de Whatsapp (por ejemplo: enviar un mensaje y hacer una llamada de voz) y resolver el ejercicio que se puede encontrar [aquí] (Kata09.md).
+Para ello, debe diseñar escenarios para dos características de Whatsapp (por ejemplo: enviar un mensaje y hacer una llamada de voz) y resolver el ejercicio que se puede encontrar [aquí](Kata09.md).
 
 ### Debe contener ###
 

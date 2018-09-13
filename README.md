@@ -20,7 +20,7 @@ La primera esta enfocada en validar su conocimento en **crear escenarios de prue
 La segunda fase esta enfocada en **validar habilidades técnicas en soluciones de problemas**, abajo tenemos un ejercicio que debe ser solucionado
 
 * La solución del ejercicio [aquí](Kata09.md), en el lenguaje de programación que le resulte más conveniente
-* La solución del ejercicio debe ser realizada **via código fuente**, teniendo como criterios de validación la interpretación del problema y la lógica de programación aplicada.
+* La solución del ejercicio debe ser realizada **via código fuente** (Java, Ruby, Python, C#, Javascript), teniendo como criterios de validación la interpretación del problema y la lógica de programación aplicada.
 
 
 

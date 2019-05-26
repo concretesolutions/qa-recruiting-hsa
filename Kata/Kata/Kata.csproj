@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckOut.cs" />
+    <Compile Include="PricingRules.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

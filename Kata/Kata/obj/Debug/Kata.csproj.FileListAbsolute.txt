@@ -1,7 +1,7 @@
 D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\bin\Debug\Kata.exe.config
 D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\bin\Debug\Kata.exe
 D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\bin\Debug\Kata.pdb
-D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\obj\Debug\Kata.csprojAssemblyReference.cache
 D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\obj\Debug\Kata.csproj.CoreCompileInputs.cache
 D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\obj\Debug\Kata.exe
 D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\obj\Debug\Kata.pdb
+D:\Work\Github\rosanacastro\qa-recruiting-hsa\Kata\Kata\obj\Debug\Kata.csprojAssemblyReference.cache

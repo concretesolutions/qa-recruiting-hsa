@@ -5,28 +5,28 @@ import com.typesafe.config.ConfigValue;
 
 import java.util.HashMap;
 
-public class ListOfItems {
+public class ConfigCatalog implements Catalog {
 
     private static Config defaultConfig;
-    private static HashMap<String,Item> listOfItems;
+    private static HashMap<String,Item> catalog;
 
     private  static Config getConfig(String file) {
         if (defaultConfig==null) {
-             defaultConfig = ConfigFactory.parseResources(file);
+            defaultConfig = ConfigFactory.parseResources(file);
 
         }
         return defaultConfig;
     }
 
-    public static HashMap<String, Item> getListOfItems(String file){
+    public HashMap<String, Item> getListOfItems(String file){
 
-        if (listOfItems==null) {
+        if (catalog ==null) {
 
             defaultConfig = getConfig(file);
 
             final ConfigValue configItems = defaultConfig.getObject("products");
 
-            listOfItems = new HashMap<>(((ConfigObject) configItems).size());
+            catalog = new HashMap<>(((ConfigObject) configItems).size());
 
             ((ConfigObject) configItems).keySet().forEach(pname -> {
 
@@ -48,13 +48,11 @@ public class ListOfItems {
                     item = new Item(productName,Double.parseDouble(productPrice));
                 }
 
-                listOfItems.put(item.getName(),item);
+                catalog.put(item.getName(),item);
 
             });
 
         }
-        return listOfItems;
+        return catalog;
     }
-
-
 }

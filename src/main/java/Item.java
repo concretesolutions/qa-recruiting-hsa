@@ -1,4 +1,4 @@
-public class Item {
+public class Item implements Rules{
 
     private String name;
     private double price;

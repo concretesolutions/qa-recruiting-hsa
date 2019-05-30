@@ -7,36 +7,36 @@ import java.util.HashMap;
 
 public class CheckoutTest {
 
-    static Basket basket;
+    static BasketFromConfig basketFromConfig;
 
     @BeforeClass
     public static void beforeAllTestMethods() {
 
-        ConfigCatalog loadCatalog = new ConfigCatalog();
+        CatalogFromConfig loadCatalog = new CatalogFromConfig();
 
-        HashMap<String, Item> config = loadCatalog.getListOfItems("catalog.conf");
+        HashMap<String, Item>  config = loadCatalog.getListOfItems("catalog.conf");
 
-        basket = new Basket(config);
+        basketFromConfig = new BasketFromConfig(config);
     }
 
     @Test
-    public void checkPriceA(){
-        Assert.assertEquals(0,basket.price(""),0.0d);
+    public void test_totals(){
+        Assert.assertEquals(0, basketFromConfig.price(""),0.0d);
 
-        Assert.assertEquals(50,basket.price("A"),0.0d);
-        Assert.assertEquals(80,basket.price("AB"),0.0d);
-        Assert.assertEquals(115,basket.price("CDBA"),0.0d);
+        Assert.assertEquals(50, basketFromConfig.price("A"),0.0d);
+        Assert.assertEquals(80, basketFromConfig.price("AB"),0.0d);
+        Assert.assertEquals(115, basketFromConfig.price("CDBA"),0.0d);
 
-        Assert.assertEquals(100,basket.price("AA"),0.0d);
-        Assert.assertEquals(130,basket.price("AAA"),0.0d);
-        Assert.assertEquals(180,basket.price("AAAA"),0.0d);
-        Assert.assertEquals(230,basket.price("AAAAA"),0.0d);
-        Assert.assertEquals(260,basket.price("AAAAAA"),0.0d);
+        Assert.assertEquals(100, basketFromConfig.price("AA"),0.0d);
+        Assert.assertEquals(130, basketFromConfig.price("AAA"),0.0d);
+        Assert.assertEquals(180, basketFromConfig.price("AAAA"),0.0d);
+        Assert.assertEquals(230, basketFromConfig.price("AAAAA"),0.0d);
+        Assert.assertEquals(260, basketFromConfig.price("AAAAAA"),0.0d);
 
-        Assert.assertEquals(160,basket.price("AAAB"),0.0d);
-        Assert.assertEquals(175,basket.price("AAABB"),0.0d);
-        Assert.assertEquals(190,basket.price("AAABBD"),0.0d);
-        Assert.assertEquals(190,basket.price("DABABA"),0.0d);
+        Assert.assertEquals(160, basketFromConfig.price("AAAB"),0.0d);
+        Assert.assertEquals(175, basketFromConfig.price("AAABB"),0.0d);
+        Assert.assertEquals(190, basketFromConfig.price("AAABBD"),0.0d);
+        Assert.assertEquals(190, basketFromConfig.price("DABABA"),0.0d);
 
     }
 

@@ -5,7 +5,7 @@ import com.typesafe.config.ConfigValue;
 
 import java.util.HashMap;
 
-public class ConfigCatalog implements Catalog {
+public class CatalogFromConfig {
 
     private static Config defaultConfig;
     private static HashMap<String,Item> catalog;

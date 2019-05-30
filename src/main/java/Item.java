@@ -1,8 +1,9 @@
-public class Item implements Rules{
+public class Item {
 
     private String name;
     private double price;
     private Promotion promotions;
+    private int quantity;
 
     public Item(String name, double price) {
         this.name = name;
@@ -13,6 +14,10 @@ public class Item implements Rules{
         this.name = name;
         this.price = price;
         this.promotions = promotion;
+    }
+
+    public Item(String productName) {
+        this.name = productName;
     }
 
     public String getName() {
@@ -37,6 +42,14 @@ public class Item implements Rules{
 
     public void setPromotions(Promotion promotions) {
         this.promotions = promotions;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public double checkPromotion(int quantity){

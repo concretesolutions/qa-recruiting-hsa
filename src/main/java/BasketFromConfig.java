@@ -1,29 +1,31 @@
 import java.util.HashMap;
 
-public class Basket {
+public class BasketFromConfig implements RulesPromotion{
 
     private HashMap<String, Item> config;
     private HashMap<Item,Integer> basketList;
     private double total;
 
-    public Basket(HashMap<String, Item> config) {
+    public BasketFromConfig(HashMap<String, Item> config) {
         this.config = config;
         basketList = new HashMap<>();
         total = 0;
     }
 
-    private void addItemsToBasket(String productName, Integer quantity){
-        Item item = config.get(productName);
-        if(basketList.get(item) != null){
-            int aux = basketList.get(item).intValue();
-            basketList.put(item,++aux);
-        }else{
-            quantity = 1;
-            basketList.put(item,quantity);
+    public void addItemsToBasket(String productName, Integer quantity){
+        if(!productName.equals("")){
+            Item item = config.get(productName);
+            if(basketList.get(item) != null){
+                int aux = basketList.get(item).intValue();
+                basketList.put(item,++aux);
+            }else{
+                quantity = 1;
+                basketList.put(item,quantity);
+            }
         }
     }
 
-    private double checkTotal(){
+    public double checkTotal(){
         basketList.forEach((item,quantity) -> {
             if (item.getPromotions()!=null){
                 total = total + item.checkPromotion(quantity);

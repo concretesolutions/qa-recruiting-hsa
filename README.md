@@ -25,7 +25,7 @@ La segunda fase esta enfocada en **validar habilidades técnicas en soluciones d
 
 
 
-### ** Proceso de sumisión ** ###
+### ** Proceso de entrega ** ###
 El candidato debe implementar la solución y enviar un pull request a este repositorio con la solución.
 
 El proceso de Pull Request funciona de la siguiente manera:

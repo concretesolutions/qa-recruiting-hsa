@@ -1,0 +1,35 @@
+name: "item A"
+description: "1 item A for 50"
+condition: "item.getName() == 'A'"
+actions:
+  - "item.setPrice(item.getQuantity() * 50);"
+---
+name: "item B"
+description: "1 item B for 30"
+condition: "item.getName() == 'B'"
+actions:
+  - "item.setPrice(item.getQuantity() * 30);"
+---
+name: "item C"
+description: "1 item C for 20"
+condition: "item.getName() == 'C'"
+actions:
+  - "item.setPrice(item.getQuantity() * 20);"
+---
+name: "item D"
+description: "1 item D for 15"
+condition: "item.getName() == 'D'"
+actions:
+  - "item.setPrice(item.getQuantity() * 15);"
+---
+name: "promo A"
+description: "3 item A for 130"
+condition: "item.getName().equals('A') && item.getQuantity() / 3 >= 1"
+actions:
+  - "int quotient = item.getQuantity() / 3;  item.setPrice(item.getPrice() - quotient * 20)"
+---
+name: "promo B"
+description: "2 item b for 45"
+condition: "item.getName().equals('B') && item.getQuantity() / 2 >= 1"
+actions:
+  - "int quotient = item.getQuantity() / 2;  item.setPrice(item.getPrice() - quotient * 15)"

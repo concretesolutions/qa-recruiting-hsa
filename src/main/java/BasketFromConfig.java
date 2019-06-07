@@ -2,31 +2,37 @@ import java.util.HashMap;
 
 public class BasketFromConfig implements RulesPromotion{
 
-    private HashMap<String, Item> config;
-    private HashMap<Item,Integer> basketList;
+    private HashMap<String, Item> catalog;
+    private HashMap<String, Item> basketList;
     private double total;
 
     public BasketFromConfig(HashMap<String, Item> config) {
-        this.config = config;
+        this.catalog = config;
         basketList = new HashMap<>();
         total = 0;
     }
 
-    public void addItemsToBasket(String productName, Integer quantity){
+    public void addItemToBasket(String productName){
         if(!productName.equals("")){
-            Item item = config.get(productName);
-            if(basketList.get(item) != null){
-                int aux = basketList.get(item).intValue();
-                basketList.put(item,++aux);
+            Item item = catalog.get(productName);
+            if(basketList.get(productName) != null){
+                int aux = basketList.get(productName).getQuantity();
+                item.setQuantity(++aux);
+                basketList.put(productName,item);
             }else{
-                quantity = 1;
-                basketList.put(item,quantity);
+                int quantity = 1;
+                item.setQuantity(quantity);
+                basketList.put(productName,item);
             }
         }
     }
 
     public double checkTotal(){
-        basketList.forEach((item,quantity) -> {
+
+        total = 0;
+
+        basketList.forEach((name,item) -> {
+            int quantity = item.getQuantity();
             if (item.getPromotions()!=null){
                 total = total + item.checkPromotion(quantity);
             }else {
@@ -44,12 +50,10 @@ public class BasketFromConfig implements RulesPromotion{
 
         char[] arrayItems = listOfItems.toCharArray();
 
-        int quantity = 1;
-
         if (arrayItems.length != 0){
             for (char sku:arrayItems) {
                 String productName = String.valueOf(sku);
-                addItemsToBasket(productName,quantity);
+                addItemToBasket(productName);
             }
         }
 

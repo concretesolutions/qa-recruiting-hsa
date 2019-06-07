@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="17" failures="0" name="com.kata.spring.cucumber.CucumberRunnerTest" time="0.401" errors="4" skipped="13">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
+    <property name="java.vm.version" value="25.211-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Work\Github\rosanacastro\Investigacion\spring-cucumber-selenium-kata"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Work\Github\rosanacastro\Investigacion\spring-cucumber-selenium-kata"/>
+    <property name="java.runtime.version" value="1.8.0_211-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_211\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ROSANA~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.6.1\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_211\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files\Git\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\apache-maven-3.6.1\bin;C:\Users\Rosana Castro García\AppData\Local\Microsoft\WindowsApps;C:\Users\Rosana Castro García\AppData\Roaming\npm;C:\Program Files\Java\jdk-11.0.3\bin;C:\Program Files\Git\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.3\bin;;."/>
+    <property name="maven.conf" value="C:\Program Files\apache-maven-3.6.1\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.6.1\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Rosana Castro García"/>
+    <property name="user.timezone" value="America/Santiago"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Rosana Castro García"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.6.1\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_211\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="es"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_211"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_211\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_211\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_211\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.6.1\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="Given In a conversation" time="0.019">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ✽.Given In a conversation(delete_sms.feature:5)
+</error>
+    <system-out>Feature: Delete text messages
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="Scenario: Delete text messages from Whatsapp" time="0.024">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ✽.Given In a conversation(delete_sms.feature:5)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="When I click on the cloud of a message" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="And A options panel is displayed" time="0.039">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="And Several options are visualized" time="0.041">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="Then I select the option &quot;Eliminar para todos&quot;" time="0.048">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="And I click on the OK button" time="0.053">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="And The message is removed from the conversation" time="0.058">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Delete text messages from Whatsapp" name="And It is displayed in the message cloud &quot;Eliminaste este mensaje&quot;" time="0.063">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="Given In a conversation" time="0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ✽.Given In a conversation(send_sms.feature:6)
+</error>
+    <system-out>
+  Scenario: Delete text messages from Whatsapp                         &amp;#27;[90m# delete_sms.feature:3&amp;#27;[0m
+    &amp;#27;[31mGiven &amp;#27;[0m&amp;#27;[31mIn a conversation&amp;#27;[0m                                            &amp;#27;[90m# SendAndDeleteMessages.inAConversation()&amp;#27;[0m
+      &amp;#27;[31mjava.lang.NullPointerException
+      	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+      	at ?.Given In a conversation(delete_sms.feature:5)
+      &amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI click on the cloud of a message&amp;#27;[0m                             &amp;#27;[90m# SendAndDeleteMessages.iClickOnTheCloudOfAMessage()&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mA options panel is displayed&amp;#27;[0m                                   &amp;#27;[90m# SendAndDeleteMessages.aOptionsPanelIsDisplayed()&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mSeveral options are visualized&amp;#27;[0m                                 &amp;#27;[90m# SendAndDeleteMessages.severalOptionsAreVisualized()&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI select the option &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mEliminar para todos&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m                     &amp;#27;[90m# SendAndDeleteMessages.iSelectTheOption(String)&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mI click on the OK button&amp;#27;[0m                                       &amp;#27;[90m# SendAndDeleteMessages.iClickOnTheOKButton()&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mThe message is removed from the conversation&amp;#27;[0m                   &amp;#27;[90m# SendAndDeleteMessages.theMessageIsRemovedFromTheConversation()&amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mIt is displayed in the message cloud &quot;&amp;#27;[0m&amp;#27;[36m&amp;#27;[1mEliminaste este mensaje&amp;#27;[0m&amp;#27;[36m&quot;&amp;#27;[0m &amp;#27;[90m# SendAndDeleteMessages.itIsDisplayedInTheMessageCloud(String)&amp;#27;[0m
+Feature: Sending text messages
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="Scenario: Send text message from WhatsApp" time="0.003">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ✽.Given In a conversation(send_sms.feature:6)
+</error>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="When I write a text message &quot;Hola, como estás&quot;" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="And I press the send button" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="Then The message is displayed in a cloud" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="And Two gray arrows are displayed" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="Then The text box is cleaned" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Send text message from WhatsApp" name="And The cursor is placed at the beginning to send another message" time="0.003">
+    <skipped/>
+  </testcase>
+</testsuite>

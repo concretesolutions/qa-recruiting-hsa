@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.kata.spring.cucumber.CucumberRunnerTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 0, Errors: 4, Skipped: 13, Time elapsed: 2.564 sec <<< FAILURE!
+Given In a conversation(Scenario: Delete text messages from Whatsapp)  Time elapsed: 0.019 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ?.Given In a conversation(delete_sms.feature:5)
+
+Scenario: Delete text messages from Whatsapp  Time elapsed: 0.024 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ?.Given In a conversation(delete_sms.feature:5)
+
+Given In a conversation(Scenario: Send text message from WhatsApp)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ?.Given In a conversation(send_sms.feature:6)
+
+Scenario: Send text message from WhatsApp  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.kata.spring.cucumber.steps.SendAndDeleteMessages.inAConversation(SendAndDeleteMessages.java:48)
+	at ?.Given In a conversation(send_sms.feature:6)
+

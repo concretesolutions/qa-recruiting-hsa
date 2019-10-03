@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Supermercado XYZ</title>
+    <script type="text/javascript">
+        function capturar(frm) {
+          // Productos
+          var A,B,C,D=0;
+            //Validar que no sea n
+          if(frm.CantidadA.value < 0){
+            A=0;
+          }else {
+            A= frm.CantidadA.value;
+          }
+          console.log(A);
+          if(frm.CantidadB.value < 0){
+            B=0;
+          }else {
+          B = frm.CantidadB.value;
+          }
+          console.log(B);
+          if(frm.CantidadC.value <0){
+              C=0;
+          }else {
+          C = frm.CantidadC.value;
+          }
+          console.log(C);
+          if(frm.CantidadD.value <0){
+              D=0;
+          }else{
+          D = frm.CantidadD.value;
+          }
+          console.log(D);
+          //Definición de precios
+          OfertaA= 130;
+          PrecioIndA= 50;
+          OfertaB= 45;
+          PrecioIndB= 30;
+          PrecioIndC=20;
+          PrecioIndD=15;
+          TotalC= C*PrecioIndC;
+          TotalD= D*PrecioIndD;
+          
+          if(A % 3 == 0){
+              TotalA= A/3 * OfertaA;
+              console.log('Precio Oferta: '+A +'paga'+TotalA);
+          }else {              
+              var RestoA= Math.round(A % 3);
+              console.log('Resto es: '+RestoA);
+              var CantConOfertaA= A-RestoA; 
+              TotalA=OfertaA*CantConOfertaA/3 + PrecioIndA*RestoA; 
+              console.log('Precio Normal'+TotalA); 
+          }
+          if(B % 2 == 0){
+              TotalB= B/2 * OfertaB;
+              console.log('se cobra precio oferta:'+B +'paga'+TotalB);
+          }else {
+              var RestoB= Math.round(B % 2);
+              console.log('Resto es: '+RestoB);
+              var CantConOfertaB= B-RestoB; 
+              TotalB=OfertaB*CantConOfertaB/2 + PrecioIndB*RestoB;
+              console.log('Precio Normal'+TotalB);
+          }
+          var TotalaPagar=0;
+          TotalaPagar= TotalA + TotalB + TotalC + TotalD;
+          console.log('Total a Pagar: '+TotalaPagar);
+          alert("El total a pagar es: "+TotalaPagar);
+          document.getElementById("form1").reset();
+        }
+        </script>
+</head>
+<body>
+<form id="form1">
+  <table border="1">
+    <tr>
+        <td>Productos</td>
+        <td>Precio</td>
+        <td>Oferta</td>
+        <td>Cantidad Productos</td>
+    </tr>
+    <tr>
+            <td>A</td>
+            <td>50</td>
+            <td>3 por 130</td>
+            <td><input type="number" name="CantidadA" min="0" max="5"></td>
+    </tr>
+    <tr>
+            <td>B</td>
+            <td>30</td>
+            <td>2 por 45</td>
+            <td><input type="number" name="CantidadB" min="0" max="5"></td>
+    </tr>
+    <tr>
+            <td>C</td>
+            <td>20</td>
+            <td>-</td>
+            <td><input type="number" name="CantidadC" min="0" max="5"></td>
+    </tr>
+    <tr>
+            <td>D</td>
+            <td>15</td>
+            <td>-</td>
+            <td><input type="number" name="CantidadD" min="0" max="5"></td>
+    </tr>
+    
+  </table> 
+
+  <input type="button" value="Comprar" onclick="capturar(this.form)">
+</form>
+</body>
+</html>

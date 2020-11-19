@@ -1,0 +1,26 @@
+Feature: Whatsapp Web
+		 Desafío Accenture
+		 Cristian Andrés Olivares Canales
+		
+Scenario: Ingresar a Whatsapp Web utilizando código QR
+	Given: El usuario ingresa al sitio https://web.whatsapp.com/
+	When: El usuario escanea el código QR utilizando la aplicación Whatsapp en su teléfono.
+	Then: El sistema permite utilizar Whatsapp desde el navegador.
+	And: El sistema despliega Chats correspondientes al usuario.
+	
+Scenario: Ingresar a Whatsapp Web previamente logeado
+	Given: El usuario ingresa al sitio https://web.whatsapp.com/
+	And: El usuario ya ingresó a la sesión anteriormente.
+	When: El usuario NO escanea el código QR.
+	Then: El sistema realiza el login automaticamente.
+	And: El sistema permite utilizar Whatsapp desde el navegador.
+	And: El sistema despliega Chats correspondientes al usuario.
+	
+Scenario: Cerrar Sesión Whatsapp Web logon con código QR
+	Given: El usuario ingresa al sitio https://web.whatsapp.com/
+	And: El usuario escanea el código QR utilizando la aplicación Whatsapp en su teléfono.
+	And: El sistema permite utilizar Whatsapp desde el navegador.
+	And: El sistema despliega Chats correspondientes al usuario.
+	When: El usuario presiona el botón para Cerrar Sesión.
+	Then: El sistema cierra sesión y redirije al usuario al sitio https://web.whatsapp.com/
+	

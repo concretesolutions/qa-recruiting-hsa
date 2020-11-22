@@ -1,0 +1,20 @@
+Feature: Bloqueo de usuarios no deseados
+
+Scenario: Usuario  desea bloquear Contacto
+  Given usuario dentro de la aplicacion
+  When I press contacto a bloquear
+  And I press el boton de opciones en la parte superior izquierda
+  And I press el boton "Mas"
+  And I press el boton "bloquear"
+  Then I see el menu de acciones que contiene el mensaje "¡Quieres bloquear a X ? Los contactos bloqueados no podran llamarte ni enviarte mensajes"
+  And I see el mensaje "Usuario bloqueado"
+
+
+Scenario: usuario desea verificar lista de contactos bloqueados
+  Given Usuario dentro de la aplicacion Whatsapp 
+  When I press "ajustes" en el menu izquierdo
+  And I press "cuenta" button
+  And I press "privacidad" button
+  And I press "Contactos Bloqueados" button
+  Then I see listado de contactos bloqueados
+ 
